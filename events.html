@@ -15,6 +15,19 @@
   </head>
 
   <body>
+    <!-- Preloader -->
+<div id="preloader">
+  <div class="wrapper">
+    <div class="box-wrap">
+      <div class="box one"></div>
+      <div class="box two"></div>
+      <div class="box three"></div>
+      <div class="box four"></div>
+      <div class="box five"></div>
+      <div class="box six"></div>
+    </div>
+  </div>
+</div>
    <nav id="top">
       <div class="logo-container">
         <a href="/index.html" class="logo-link">
@@ -736,11 +749,28 @@
 
       // Hamburger menu functionality
       const hamburger = document.getElementById("hamburger");
-      const navLinks = document.getElementById("navLinks").querySelector("ul");
+const navLinks = document.getElementById("navLinks").querySelector("ul");
 
-      hamburger.addEventListener("click", function () {
-        navLinks.classList.toggle("show");
-      });
+hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("show");
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", function(e) {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("show");
+    }
+});
+
+// Close menu when clicking on nav links
+navLinks.addEventListener("click", function(e) {
+    if (e.target.tagName === "A") {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("show");
+    }
+});
 
       // Smooth scrolling function for "See More" buttons
       function scrollToSection(sectionId) {
@@ -772,6 +802,15 @@
           document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         });
       }
+      // Preloader functionality
+document.body.classList.add('loading');
+
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.body.classList.remove('loading');
+    document.body.classList.add('loaded');
+  }, 1000); // Show preloader for at least 1 second
+});
     </script>
   </body>
 </html>
