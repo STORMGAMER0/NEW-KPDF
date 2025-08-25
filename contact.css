@@ -1,20 +1,332 @@
-* {
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .preloader.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .wrapper {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -100px;
+            width: 200px;
+            height: 200px;
+            background-color: transparent;
+            border: none;
+            -webkit-user-select: none;
+        }
+
+        .box-wrap {
+            width: 70%;
+            height: 70%;
+            margin: calc((100% - 70%)/2) calc((100% - 70%)/2);
+            position: relative;
+            transform: rotate(-45deg);
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: rgba(135, 0, 0, .6);
+            background: linear-gradient(to right, #141562, #486FBC, #EAB5A1, #8DD6FF, #4973C9, #D07CA7, #F4915E, #F5919E, #B46F89, #141562, #486FBC);
+            background-position: 0% 50%;
+            background-size: 1000% 1000%;
+            visibility: hidden;
+        }
+
+        .box.one {
+            animation: moveGradient 15s infinite, oneMove 3.5s infinite;
+        }
+
+        .box.two {
+            animation: moveGradient 15s infinite, twoMove 3.5s .15s infinite;
+        }
+
+        .box.three {
+            animation: moveGradient 15s infinite, threeMove 3.5s .3s infinite;
+        }
+
+        .box.four {
+            animation: moveGradient 15s infinite, fourMove 3.5s .575s infinite;
+        }
+
+        .box.five {
+            animation: moveGradient 15s infinite, fiveMove 3.5s .725s infinite;
+        }
+
+        .box.six {
+            animation: moveGradient 15s infinite, sixMove 3.5s .875s infinite;
+        }
+
+        @keyframes moveGradient {
+            to {
+                background-position: 100% 50%
+            }
+        }
+
+        @keyframes oneMove {
+            0% {
+                visibility: visible;
+                clip-path: inset(0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            14.2857% {
+                clip-path: inset(0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            28.5714% {
+                clip-path: inset(35% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            42.8571% {
+                clip-path: inset(35% 70% 35% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            57.1428% {
+                clip-path: inset(35% 70% 35% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            71.4285% {
+                clip-path: inset(0% 70% 70% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            85.7142% {
+                clip-path: inset(0% 70% 70% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            100% {
+                clip-path: inset(0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+        }
+
+        @keyframes twoMove {
+            0% {
+                visibility: visible;
+                clip-path: inset(0% 70% 70% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            14.2857% {
+                clip-path: inset(0% 70% 70% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            28.5714% {
+                clip-path: inset(0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            42.8571% {
+                clip-path: inset(0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            57.1428% {
+                clip-path: inset(35% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            71.4285% {
+                clip-path: inset(35% 70% 35% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            85.7142% {
+                clip-path: inset(35% 70% 35% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            100% {
+                clip-path: inset(0% 70% 70% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+        }
+
+        @keyframes threeMove {
+            0% {
+                visibility: visible;
+                clip-path: inset(35% 70% 35% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            14.2857% {
+                clip-path: inset(35% 70% 35% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            28.5714% {
+                clip-path: inset(0% 70% 70% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            42.8571% {
+                clip-path: inset(0% 70% 70% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            57.1428% {
+                clip-path: inset(0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            71.4285% {
+                clip-path: inset(0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            85.7142% {
+                clip-path: inset(35% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            100% {
+                clip-path: inset(35% 70% 35% 0 round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+        }
+
+        @keyframes fourMove {
+            0% {
+                visibility: visible;
+                clip-path: inset(35% 0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            14.2857% {
+                clip-path: inset(35% 0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            28.5714% {
+                clip-path: inset(35% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            42.8571% {
+                clip-path: inset(70% 35% 0% 35% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            57.1428% {
+                clip-path: inset(70% 35% 0% 35% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            71.4285% {
+                clip-path: inset(70% 0 0 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            85.7142% {
+                clip-path: inset(70% 0 0 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            100% {
+                clip-path: inset(35% 0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+        }
+
+        @keyframes fiveMove {
+            0% {
+                visibility: visible;
+                clip-path: inset(70% 0 0 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            14.2857% {
+                clip-path: inset(70% 0 0 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            28.5714% {
+                clip-path: inset(35% 0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            42.8571% {
+                clip-path: inset(35% 0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            57.1428% {
+                clip-path: inset(35% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            71.4285% {
+                clip-path: inset(70% 35% 0% 35% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            85.7142% {
+                clip-path: inset(70% 35% 0% 35% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            100% {
+                clip-path: inset(70% 0 0 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+        }
+
+        @keyframes sixMove {
+            0% {
+                visibility: visible;
+                clip-path: inset(70% 35% 0% 35% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            14.2857% {
+                clip-path: inset(70% 35% 0% 35% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            28.5714% {
+                clip-path: inset(70% 0 0 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            42.8571% {
+                clip-path: inset(70% 0 0 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            57.1428% {
+                clip-path: inset(35% 0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            71.4285% {
+                clip-path: inset(35% 0% 35% 70% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            85.7142% {
+                clip-path: inset(35% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+            100% {
+                clip-path: inset(70% 35% 0% 35% round 5%);
+                animation-timing-function: cubic-bezier(0.86,  0,  0.07,  1);
+            }
+        }
+
+        /* Main page content - initially hidden */
+        .page-content {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .page-content.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Rest of the existing styles */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         html, body {
-    height: 100%;
-    overflow-x: hidden; /* Only hide horizontal overflow */
-    overflow-y: auto;   /* Allow vertical scrolling */
-}
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
 
         body {
             font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure minimum full height */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* Navigation */
@@ -70,6 +382,22 @@
             transition: 0.3s;
         }
 
+        .hamburger.active .bar:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .nav-links {
+            position: relative;
+        }
+
         .nav-links ul {
             list-style: none;
             display: flex;
@@ -94,11 +422,9 @@
 
         /* Main Content Container */
         .main-container {
-           flex: 1;
-    display: flex;
-    /* Remove fixed height to allow content to flow naturally */
-    /* height: calc(100vh - 70px); - REMOVE THIS LINE */
-    min-height: calc(100vh - 70px); /* Use min-height instead */
+            flex: 1;
+            display: flex;
+            min-height: calc(100vh - 70px);
         }
 
         /* Left Section - Contact */
@@ -364,51 +690,17 @@
             color: #e8f4fd;
         }
 
-        /* Mobile Responsive */
-        @media (max-width: 1024px) {
+        /* Tablet Responsive */
+        @media (max-width: 1024px) and (min-width: 769px) {
             .main-container {
-                flex-direction: column;
-                height: calc(100vh - 70px);
-                overflow-y: auto;
+                padding: 0 20px;
             }
             
-            .contact-section {
-                width: 100%;
-                min-height: 60vh;
-            }
-            
-            .donation-section {
-                width: 100%;
-                min-height: 40vh;
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                overflow-y: auto;
-            }
-            
-            .nav-links ul {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: rgb(61, 36, 151);
-                flex-direction: column;
-                padding: 20px 0;
-            }
-
-            .nav-links ul.show {
-                display: flex;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
             .contact-container {
                 padding: 30px 25px;
+                max-width: none;
+                width: 95%;
+                margin: 20px auto;
             }
             
             h1 {
@@ -427,6 +719,12 @@
             .donation-description {
                 font-size: 0.85rem;
             }
+            
+            .donation-container {
+                max-width: none;
+                width: 95%;
+                margin: 20px auto;
+            }
         }
 
         @media (max-width: 600px) {
@@ -436,15 +734,12 @@
             }
         }
 
-
         .footer {
             background: linear-gradient(135deg, rgb(61, 36, 151) 0%, #4a2c8a 100%);
-    color: white;
-    padding: 60px 0 0;
-    position: relative;
-    overflow: hidden;
-    margin-top: auto; /* Push footer to bottom if content is short */
-    flex-shrink: 0;   /* Prevent footer from shrinking */
+            color: white;
+            padding: 60px 0 0;
+            position: relative;
+            overflow: hidden;
         }
 
         .footer::before {
@@ -646,54 +941,6 @@
             fill: white;
         }
 
-        .newsletter-section {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .newsletter-form {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-            flex-direction: column;
-        }
-
-        .newsletter-input {
-            flex: 1;
-            padding: 12px 15px;
-            border: none;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.9);
-            font-size: 0.9rem;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        .newsletter-input:focus {
-            background: white;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
-        }
-
-        .newsletter-btn {
-            padding: 12px 20px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .newsletter-btn:hover {
-            background: linear-gradient(45deg, #5a6fd8, #6b4190);
-            transform: translateY(-2px);
-        }
-
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding: 30px 0;
@@ -713,24 +960,7 @@
             font-size: 0.9rem;
         }
 
-        .footer-bottom-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        .footer-bottom-links a {
-            color: #b0b0b0;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-bottom-links a:hover {
-            color: white;
-        }
-
-        /* Responsive Design */
+        /* Footer Responsive */
         @media (max-width: 768px) {
             .footer-main {
                 grid-template-columns: 1fr;
@@ -760,15 +990,6 @@
                 text-align: center;
             }
 
-            .footer-bottom-links {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-            }
-
             .contact-info li {
                 justify-content: center;
                 text-align: left;
@@ -783,8 +1004,160 @@
             .footer {
                 padding: 40px 0 0;
             }
+        }
 
-            .newsletter-section {
-                padding: 20px;
+        /* Sparkle animation */
+        @keyframes sparkle {
+            0% {
+                opacity: 1;
+                transform: scale(0) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1) rotate(180deg);
             }
         }
+
+        /* Mobile Responsive */
+@media (max-width: 768px) {
+    /* Hamburger Menu */
+    .hamburger {
+        display: flex;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .nav-links ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: rgb(61, 36, 151);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 40px 0;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-links ul.show {
+        left: 0;
+    }
+
+    .nav-links ul li {
+        margin: 15px 0;
+    }
+
+    .nav-links ul li a {
+        font-size: 1.2rem;
+        padding: 15px 25px;
+    }
+
+    /* Main content adjustments for mobile - STACKED LAYOUT */
+    body {
+        overflow-y: auto;
+    }
+    
+    .main-container {
+        flex-direction: column;
+        min-height: auto;
+        overflow-y: visible;
+    }
+    
+    .contact-section {
+        width: 100%;
+        min-height: 100vh;
+        padding: 20px;
+    }
+    
+    .donation-section {
+        width: 100%;
+        min-height: 60vh;
+        padding: 20px;
+    }
+
+    .contact-container {
+        padding: 30px 25px;
+        max-width: none;
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .social-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .donation-title {
+        font-size: 1.5rem;
+    }
+    
+    .donation-description {
+        font-size: 0.85rem;
+    }
+    
+    .donation-container {
+        max-width: none;
+        width: 95%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-container,
+    .donation-container {
+        padding: 25px 20px;
+    }
+}
+
+/* Footer Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-logo-container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info li {
+        justify-content: center;
+        text-align: left;
+    }
+}
