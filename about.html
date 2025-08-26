@@ -10,42 +10,23 @@
     />
     <link rel="stylesheet" href="/about.css" />
   </head>
-  <script>
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-      threshold: 0.3,
-      rootMargin: "0px 0px -50px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (entry.target.classList.contains("mission-text")) {
-            entry.target.classList.add("animate");
-          }
-          if (entry.target.classList.contains("mission-polaroid-gallery")) {
-            const polaroids =
-              entry.target.querySelectorAll(".mission-polaroid");
-            polaroids.forEach((polaroid) => {
-              polaroid.classList.add("deal-in");
-            });
-          }
-        }
-      });
-    }, observerOptions);
-
-    // Observe mission section elements
-    document.addEventListener("DOMContentLoaded", () => {
-      const missionText = document.querySelector(".mission-text");
-      const missionGallery = document.querySelector(
-        ".mission-polaroid-gallery"
-      );
-
-      if (missionText) observer.observe(missionText);
-      if (missionGallery) observer.observe(missionGallery);
-    });
-  </script>
+  
   <body>
+    <div class="preloader" id="preloader">
+    <div class="preloader-content">
+        <div class="wrapper">
+            <div class="box-wrap">
+                <div class="box one"></div>
+                <div class="box two"></div>
+                <div class="box three"></div>
+                <div class="box four"></div>
+                <div class="box five"></div>
+                <div class="box six"></div>
+            </div>
+        </div>
+        <!-- <div class="loading-text">Loading...</div> -->
+    </div>
+</div>
    <nav>
       <div class="logo-container">
         <a href="/index.html" class="logo-link">
@@ -54,15 +35,15 @@
         <p>KPDF</p>
       </div>
       <div class="hamburger" id="hamburger">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
       <div class="nav-links" id="navLinks">
         <ul>
           <li><a href="/index.html">HOME</a></li>
-                <li><a href="/about.html">ABOUT</a></li>
-                <li><a href="/events.html">EVENTS</a></li>
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a href="/events.html">EVENTS</a></li>
           <li><a href="/contact.html">CONTACT</a></li>
         </ul>
       </div>
@@ -77,7 +58,7 @@
           </p>
         </div>
        
-        <div class="polaroid-gallery">
+       <div class="polaroid-gallery">
           <div class="polaroid">
             <div class="polaroid-inner">
               <div class="polaroid-image">
@@ -209,7 +190,7 @@
         <div class="board-grid">
           <div class="board-member">
             <div class="member-portrait">
-              <img src="/pictures/board-member-1.jpg" alt="Bar. Samuel Chukwu">
+              <img src="" alt="Bar. Samuel Chukwu">
               <div class="portrait-overlay"></div>
             </div>
             <h3>Bar. Samuel Chukwu</h3>
@@ -217,7 +198,7 @@
           
           <div class="board-member">
             <div class="member-portrait">
-              <img src="/pictures/board-member-2.jpg" alt="Blessing Tukura">
+              <img src="" alt="Blessing Tukura">
               <div class="portrait-overlay"></div>
             </div>
             <h3>Blessing Tukura</h3>
@@ -225,7 +206,7 @@
           
           <div class="board-member">
             <div class="member-portrait">
-              <img src="/pictures/board-member-3.jpg" alt="Adimchi Ogbonna">
+              <img src="" alt="Adimchi Ogbonna">
               <div class="portrait-overlay"></div>
             </div>
             <h3>Adimchi Ogbonna</h3>
@@ -233,6 +214,7 @@
         </div>
       </div>
     </section>
+    
 
     <footer class="footer">
         <div class="footer-content">
@@ -307,7 +289,7 @@
                             </div>
                             <div>
                                 <strong>Address:</strong><br>
-                                Ibadan, Oyo State, Nigeria
+                                Abuja, FCT, Nigeria
                             </div>
                         </li>
                         <li>
@@ -318,7 +300,7 @@
                             </div>
                             <div>
                                 <strong>Phone:</strong><br>
-                                +234 (0) 123 456 7890
+                                +234 706 182 0884
                             </div>
                         </li>
                         <li>
@@ -348,5 +330,106 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains("mission-text")) {
+                        entry.target.classList.add("animate");
+                    }
+                    if (entry.target.classList.contains("mission-polaroid-gallery")) {
+                        const polaroids = entry.target.querySelectorAll(".mission-polaroid");
+                        polaroids.forEach((polaroid) => {
+                            polaroid.classList.add("deal-in");
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe mission section elements
+        document.addEventListener("DOMContentLoaded", () => {
+            const missionText = document.querySelector(".mission-text");
+            const missionGallery = document.querySelector(".mission-polaroid-gallery");
+
+            if (missionText) observer.observe(missionText);
+            if (missionGallery) observer.observe(missionGallery);
+
+            // Hamburger menu functionality
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link (mobile)
+            const menuLinks = navLinks.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside (mobile)
+            document.addEventListener('click', function(event) {
+                if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    const body = document.body;
+    
+    const images = document.querySelectorAll('img');
+    let loadedImages = 0;
+    
+    function checkAllImagesLoaded() {
+        loadedImages++;
+        if (loadedImages === images.length) {
+            hidePreloader();
+        }
+    }
+    
+    function hidePreloader() {
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            body.classList.remove('loading');
+            
+            setTimeout(() => {
+                preloader.remove();
+            }, 500);
+        }, 1000);
+    }
+    
+    if (images.length === 0) {
+        hidePreloader();
+        return;
+    }
+    
+    images.forEach(img => {
+        if (img.complete) {
+            checkAllImagesLoaded();
+        } else {
+            img.addEventListener('load', checkAllImagesLoaded);
+            img.addEventListener('error', checkAllImagesLoaded);
+        }
+    });
+});
+
+document.body.classList.add('loading');
+    </script>
   </body>
-</html>
+</html> 

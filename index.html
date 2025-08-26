@@ -11,6 +11,21 @@
     />
   </head>
   <body>
+   <div class="preloader" id="preloader">
+      <div class="preloader-content">
+        <div class="wrapper">
+          <div class="box-wrap">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+            <div class="box four"></div>
+            <div class="box five"></div>
+            <div class="box six"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <nav>
       <div class="logo-container">
         <a href="/index.html" class="logo-link">
@@ -18,16 +33,23 @@
         </a>
         <p>KPDF</p>
       </div>
-      <div class="hamburger" id="hamburger"></div>
+      
       <div class="nav-links" id="navLinks">
         <ul>
           <li><a href="/index.html">HOME</a></li>
-                <li><a href="/about.html">ABOUT</a></li>
-                <li><a href="/events.html">EVENTS</a></li>
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a href="/events.html">EVENTS</a></li>
           <li><a href="/contact.html">CONTACT</a></li>
         </ul>
       </div>
+      
+      <div class="hamburger-menu" id="hamburgerMenu">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+      </div>
     </nav>
+    
     <div class="container">
       <img src="/pictures/3.jpg" alt="china event" class="background-image" />
       <div class="main-content">
@@ -38,6 +60,7 @@
         </div>
       </div>
     </div>
+    
     <div class="statement">
       <h1>Who We Are</h1>
       <p>
@@ -291,119 +314,188 @@
         </p>
       </div>
     </section>
+    
     <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-main">
+          <div class="footer-section footer-logo-section">
+            <div class="footer-logo-container">
+              <img src="/pictures/kpdf logo.jpeg" class="footer-logo" alt="KPDF Logo" />
+              <div class="footer-logo-text">KPDF</div>
+            </div>
+            <p class="footer-tagline">Developing People, Changing Mindsets</p>
+            <p class="footer-description">
+              Kings Patriots Development Foundation is a Pan-African nonprofit organization committed to raising accountable and responsible leaders across Africa through youth empowerment and leadership development.
+            </p>
+            <div class="footer-social">
+              <a href="https://web.facebook.com/jude.isaac.3150" class="footer-social-link facebook" title="Facebook">
+                <svg viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/impactjude/" class="footer-social-link instagram" title="Instagram">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12.017 0C8.396 0 7.954.01 6.748.048 2.714.216.812 2.126.645 6.137.01 7.342 0 7.784 0 11.407v1.17c0 3.623.01 4.065.048 5.27.167 4.011 2.077 5.921 6.088 6.088C7.342 23.99 7.784 24 11.407 24h1.17c3.623 0 4.065-.01 5.27-.048 4.011-.167 5.921-2.077 6.088-6.088C23.99 16.658 24 16.216 24 12.593v-1.17c0-3.623-.01-4.065-.048-5.27C23.785 2.142 21.875.232 17.864.065 16.659.01 16.217 0 12.594 0h-1.17zm-.105 5.404a6.596 6.596 0 110 13.192 6.596 6.596 0 010-13.192zm7.597-2.533a1.544 1.544 0 11-3.087 0 1.544 1.544 0 013.087 0zM12 7.378a4.622 4.622 0 100 9.244 4.622 4.622 0 000-9.244z"/>
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link telegram" title="Telegram">
+                <svg viewBox="0 0 24 24">
+                  <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                </svg>
+              </a>
+              <a href="mailto:kpatriotsimpact@gmail.com" class="footer-social-link email" title="Email">
+                <svg viewBox="0 0 24 24">
+                  <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h1.82l8.544 6.545 8.544-6.545h1.82c.904 0 1.636.732 1.636 1.636z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/about.html">About Us</a></li>
+              <li><a href="/events.html">Events</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li><a href="/contact.html#donate">Donate</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Our Programs</h3>
+            <ul style="list-style: none; color: #d0d0d0; font-size: 0.95rem; line-height: 2.2;">
+              <li>Youth Empowerment</li>
+              <li>Leadership Training</li>
+              <li>Capacity Building</li>
+              <li>Mentorship</li>
+              <li>Community Development</li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Info</h3>
+            <ul class="contact-info">
+              <li>
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Address:</strong><br>
+                  Abuja, FCT, Nigeria
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Phone:</strong><br>
+                  +234 706 182 0884
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Email:</strong><br>
+                  kpatriotsimpact@gmail.com
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
         <div class="footer-content">
-            <div class="footer-main">
-                <!-- Logo and About Section -->
-                <div class="footer-section footer-logo-section">
-                    <div class="footer-logo-container">
-                        <img src="/pictures/kpdf logo.jpeg" class="footer-logo" alt="KPDF Logo" />
-                        <div class="footer-logo-text">KPDF</div>
-                    </div>
-                    <p class="footer-tagline">Developing People, Changing Mindsets</p>
-                    <p class="footer-description">
-                        Kings Patriots Development Foundation is a Pan-African nonprofit organization committed to raising accountable and responsible leaders across Africa through youth empowerment and leadership development.
-                    </p>
-                    <div class="footer-social">
-                        <a href="https://web.facebook.com/jude.isaac.3150" class="footer-social-link facebook" title="Facebook">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/impactjude/" class="footer-social-link instagram" title="Instagram">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M12.017 0C8.396 0 7.954.01 6.748.048 2.714.216.812 2.126.645 6.137.01 7.342 0 7.784 0 11.407v1.17c0 3.623.01 4.065.048 5.27.167 4.011 2.077 5.921 6.088 6.088C7.342 23.99 7.784 24 11.407 24h1.17c3.623 0 4.065-.01 5.27-.048 4.011-.167 5.921-2.077 6.088-6.088C23.99 16.658 24 16.216 24 12.593v-1.17c0-3.623-.01-4.065-.048-5.27C23.785 2.142 21.875.232 17.864.065 16.659.01 16.217 0 12.594 0h-1.17zm-.105 5.404a6.596 6.596 0 110 13.192 6.596 6.596 0 010-13.192zm7.597-2.533a1.544 1.544 0 11-3.087 0 1.544 1.544 0 013.087 0zM12 7.378a4.622 4.622 0 100 9.244 4.622 4.622 0 000-9.244z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="footer-social-link telegram" title="Telegram">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-                            </svg>
-                        </a>
-                        <a href="mailto:kpatriotsimpact@gmail.com" class="footer-social-link email" title="Email">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h1.82l8.544 6.545 8.544-6.545h1.82c.904 0 1.636.732 1.636 1.636z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/about.html">About Us</a></li>
-                        <li><a href="/events.html">Events</a></li>
-                        <li><a href="/contact.html">Contact</a></li>
-                        <li><a href="/contact.html#donate">Donate</a></li>
-                    </ul>
-                </div>
-
-                <!-- Programs -->
-                <div class="footer-section">
-                    <h3>Our Programs</h3>
-                    <ul style="list-style: none; color: #d0d0d0; font-size: 0.95rem; line-height: 2.2;">
-                        <li>Youth Empowerment</li>
-                        <li>Leadership Training</li>
-                        <li>Capacity Building</li>
-                        <li>Mentorship</li>
-                        <li>Community Development</li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <strong>Address:</strong><br>
-                                Ibadan, Oyo State, Nigeria
-                            </div>
-                        </li>
-                        <li>
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <strong>Phone:</strong><br>
-                                +234 (0) 123 456 7890
-                            </div>
-                        </li>
-                        <li>
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <strong>Email:</strong><br>
-                                kpatriotsimpact@gmail.com
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+          <div class="footer-bottom-content">
+            <div class="copyright">
+              <p>&copy; 2024 Kings Patriots Development Foundation. All rights reserved.</p>
             </div>
+          </div>
         </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="footer-content">
-                <div class="footer-bottom-content">
-                    <div class="copyright">
-                        <p>&copy; 2024 Kings Patriots Development Foundation. All rights reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </footer>
+
+    <script>
+      // Preloader functionality
+      window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        const body = document.body;
+        
+        const images = document.querySelectorAll('img');
+        let loadedImages = 0;
+        
+        function checkAllImagesLoaded() {
+          loadedImages++;
+          if (loadedImages === images.length) {
+            hidePreloader();
+          }
+        }
+        
+        function hidePreloader() {
+          setTimeout(() => {
+            preloader.classList.add('fade-out');
+            body.classList.remove('loading');
+            
+            setTimeout(() => {
+              preloader.remove();
+            }, 500);
+          }, 1000);
+        }
+        
+        if (images.length === 0) {
+          hidePreloader();
+          return;
+        }
+        
+        images.forEach(img => {
+          if (img.complete) {
+            checkAllImagesLoaded();
+          } else {
+            img.addEventListener('load', checkAllImagesLoaded);
+            img.addEventListener('error', checkAllImagesLoaded);
+          }
+        });
+      });
+
+      document.body.classList.add('loading');
+
+      // Hamburger menu functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburgerMenu.addEventListener('click', function() {
+          hamburgerMenu.classList.toggle('active');
+          navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        const navLinkItems = navLinks.querySelectorAll('a');
+        navLinkItems.forEach(link => {
+          link.addEventListener('click', function() {
+            hamburgerMenu.classList.remove('active');
+            navLinks.classList.remove('active');
+          });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!hamburgerMenu.contains(event.target) && !navLinks.contains(event.target)) {
+            hamburgerMenu.classList.remove('active');
+            navLinks.classList.remove('active');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
